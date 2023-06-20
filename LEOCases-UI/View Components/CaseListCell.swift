@@ -12,7 +12,12 @@ struct CaseListCell: View {
     var createdDate: Date
     var isComplete: Bool
     
-    private let helpers = Helpers()
+    func formatDate(value: Date) -> String {
+        let df = DateFormatter()
+        df.dateStyle = .medium
+        
+        return df.string(from: value)
+    }
     
     var body: some View {
         HStack {
@@ -20,13 +25,12 @@ struct CaseListCell: View {
                 .resizable()
                 .frame(width: 40, height: 40)
                 .foregroundColor(isComplete ? .green : .blue)
-            
         
             VStack(alignment: .leading) {
                 Text(caseNumber)
                     .font(.body).bold()
                 
-                Text("Created on \(helpers.formatDate(value: createdDate))")
+                Text("Created on \(formatDate(value: createdDate))")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }
