@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CaseListCellView: View {
+struct CaseListCell: View {
     var caseNumber: String
     var createdDate: Date
     var isComplete: Bool
@@ -39,7 +39,7 @@ struct CaseListCellView: View {
 }
 
 #Preview {
-    CaseListCellView(caseNumber: "20294750087", createdDate: Date(), isComplete: true)
+    CaseListCell(caseNumber: "20294750087", createdDate: Date(), isComplete: true)
         .preferredColorScheme(.dark)
         .scaledToFit()
 }
