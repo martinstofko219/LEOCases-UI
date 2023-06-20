@@ -8,11 +8,38 @@
 import SwiftUI
 
 struct CaseListCellView: View {
+    var caseNumber: String
+    var createdDate: Date
+    var isComplete: Bool
+    
+    private let helpers = Helpers()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "folder.circle.fill")
+                .resizable()
+                .frame(width: 40, height: 40)
+                .foregroundColor(isComplete ? .green : .blue)
+            
+        
+            VStack(alignment: .leading) {
+                Text(caseNumber)
+                    .font(.body).bold()
+                
+                Text("Created on \(helpers.formatDate(value: createdDate))")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+            .padding(.leading, 10)
+            
+            Spacer()
+        }
+        .padding(.vertical, 5)
     }
 }
 
 #Preview {
-    CaseListCellView()
+    CaseListCellView(caseNumber: "20294750087", createdDate: Date(), isComplete: true)
+        .preferredColorScheme(.dark)
+        .scaledToFit()
 }

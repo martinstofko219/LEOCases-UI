@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class Helpers {
+    func formatDate(value: Date) -> String {
+        let df = DateFormatter()
+        
+        df.dateStyle = .medium
+        
+        return df.string(from: value)
+    }
+}

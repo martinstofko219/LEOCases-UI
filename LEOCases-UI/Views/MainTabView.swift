@@ -9,10 +9,18 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            MyCasesView()
+                .tabItem { Label("My Cases", systemImage: "tray.full.fill") }
+            MyCourtDatesView()
+                .tabItem { Label("My Court Dates", systemImage: "building.columns.fill") }
+            SettingsView()
+                .tabItem { Label("Settings", systemImage: "gear") }
+        }
     }
 }
 
 #Preview {
     MainTabView()
+        .preferredColorScheme(.dark)
 }
