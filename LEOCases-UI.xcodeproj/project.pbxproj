@@ -12,6 +12,7 @@
 		C60A77EF2A42178E007FAE47 /* MyCourtDatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A77EE2A42178E007FAE47 /* MyCourtDatesView.swift */; };
 		C60A77F12A421794007FAE47 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A77F02A421794007FAE47 /* SettingsView.swift */; };
 		C6768A932A421BC90090666C /* CaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6768A922A421BC90090666C /* CaseListCell.swift */; };
+		C6BD08422A43402B006035BF /* AddCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BD08412A43402B006035BF /* AddCaseView.swift */; };
 		C6C844652A41D37900549E77 /* LEOCases_UIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C844642A41D37900549E77 /* LEOCases_UIApp.swift */; };
 		C6C844672A41D37900549E77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C844662A41D37900549E77 /* ContentView.swift */; };
 		C6C844692A41D37900549E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C844682A41D37900549E77 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		C60A77EE2A42178E007FAE47 /* MyCourtDatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourtDatesView.swift; sourceTree = "<group>"; };
 		C60A77F02A421794007FAE47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C6768A922A421BC90090666C /* CaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseListCell.swift; sourceTree = "<group>"; };
+		C6BD08412A43402B006035BF /* AddCaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaseView.swift; sourceTree = "<group>"; };
 		C6C844612A41D37900549E77 /* LEOCases-UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LEOCases-UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C844642A41D37900549E77 /* LEOCases_UIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOCases_UIApp.swift; sourceTree = "<group>"; };
 		C6C844662A41D37900549E77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				C60A77EA2A421739007FAE47 /* MainTabView.swift */,
 				C60A77EC2A42177C007FAE47 /* MyCasesView.swift */,
+				C6BD08412A43402B006035BF /* AddCaseView.swift */,
 				C60A77EE2A42178E007FAE47 /* MyCourtDatesView.swift */,
 				C60A77F02A421794007FAE47 /* SettingsView.swift */,
 			);
@@ -184,6 +187,7 @@
 				C6768A932A421BC90090666C /* CaseListCell.swift in Sources */,
 				C6C844672A41D37900549E77 /* ContentView.swift in Sources */,
 				C60A77EF2A42178E007FAE47 /* MyCourtDatesView.swift in Sources */,
+				C6BD08422A43402B006035BF /* AddCaseView.swift in Sources */,
 				C60A77F12A421794007FAE47 /* SettingsView.swift in Sources */,
 				C6C844652A41D37900549E77 /* LEOCases_UIApp.swift in Sources */,
 				C60A77EB2A421739007FAE47 /* MainTabView.swift in Sources */,

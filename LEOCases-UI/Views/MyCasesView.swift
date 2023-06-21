@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MyCasesView: View {
+    @State var showingAddCaseSheet = false
+    
     var body: some View {
         NavigationStack {
             List {
@@ -15,14 +17,17 @@ struct MyCasesView: View {
                 CaseListCell(caseNumber: "20280094875", createdDate: Date(), isComplete: true)
                 CaseListCell(caseNumber: "20285011875", createdDate: Date(), isComplete: false)
             }
-            .padding(.top, 30)
             .navigationTitle("My Cases")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Add Case") {
                         print("Add Case tapped")
+                        showingAddCaseSheet.toggle()
                     }
                 }
+            }
+            .sheet(isPresented: $showingAddCaseSheet) {
+                AddCaseView()
             }
         }
     }

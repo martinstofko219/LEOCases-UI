@@ -12,7 +12,7 @@ struct CaseListCell: View {
     var createdDate: Date
     var isComplete: Bool
     
-    func formatDate(value: Date) -> String {
+    private func formatDate(value: Date) -> String {
         let df = DateFormatter()
         df.dateStyle = .medium
         
