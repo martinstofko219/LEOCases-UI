@@ -10,6 +10,7 @@ import SwiftUI
 struct ToDoListCell: View {
     @State var label: String
     @State var isComplete: Bool
+    @State var isEditing: Bool
     
     var body: some View {
         HStack {
@@ -23,14 +24,13 @@ struct ToDoListCell: View {
                 .onTapGesture {
                     isComplete.toggle()
                 }
-            
         }
         .padding()
     }
 }
 
 #Preview {
-    ToDoListCell(label: "ToDo Label...", isComplete: false)
+    ToDoListCell(label: "ToDo Label...", isComplete: false, isEditing: false)
         .preferredColorScheme(.dark)
         .scaledToFit()
 }

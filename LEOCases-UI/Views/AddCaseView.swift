@@ -29,7 +29,7 @@ struct AddCaseView: View {
                 
                 Button {
                     let c = Case(id: UUID(), caseNumber: caseNumber, createdOn: Date(), isComplete: false)
-                    mockData.add(c)
+                    mockData.addCase(c)
                     dismiss()
                 } label: {
                     Text("Add Case")

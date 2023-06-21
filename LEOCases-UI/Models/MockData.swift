@@ -10,11 +10,11 @@ import Foundation
 final class MockData: ObservableObject {
     @Published var cases: [Case] = []
     
-    func add(_ newCase: Case) {
+    func addCase(_ newCase: Case) {
         cases.append(newCase)
     }
     
-    func remove(at offsets: IndexSet) {
+    func removeCase(at offsets: IndexSet) {
         cases.remove(atOffsets: offsets)
     }
 }

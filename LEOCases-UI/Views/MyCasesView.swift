@@ -20,7 +20,7 @@ struct MyCasesView: View {
                     CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete)
                 }
                 .onDelete(perform: { indexSet in
-                    mockData.remove(at: indexSet)
+                    mockData.removeCase(at: indexSet)
                 })
             }
             .navigationTitle("My Cases")
