@@ -9,19 +9,27 @@ import SwiftUI
 
 struct AddCaseView: View {
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var mockData: MockData
     
-    @State var caseNumber: String = ""
+    enum FocusedField {
+        case caseNumber
+    }
+    
+    @State private var caseNumber: String = ""
+    @FocusState private var focusedField: FocusedField?
     
     var body: some View {
         NavigationStack {
             Form {
                 Section {
                     TextField("Case number...", text: $caseNumber)
+                        .focused($focusedField, equals: .caseNumber)
                         .keyboardType(.numberPad)
                 }
                 
                 Button {
-                    print("Add Case tapped")
+                    let c = Case(id: UUID(), caseNumber: caseNumber, createdOn: Date(), isComplete: false)
+                    mockData.add(c)
                     dismiss()
                 } label: {
                     Text("Add Case")
@@ -40,6 +48,9 @@ struct AddCaseView: View {
                     }
                 }
             }
+            .onAppear(perform: {
+                focusedField = .caseNumber
+            })
         }
     }
 }

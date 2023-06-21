@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct LEOCases_UIApp: App {
+    
+    var mockData = MockData()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView().environmentObject(mockData)
         }
     }
 }

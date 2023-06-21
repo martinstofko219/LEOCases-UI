@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct MyCasesView: View {
-    @State var showingAddCaseSheet = false
+    @EnvironmentObject var mockData: MockData
+    
+    @State private var showingAddCaseSheet = false
     
     var body: some View {
         NavigationStack {
+            
             List {
-                CaseListCell(caseNumber: "20294750087", createdDate: Date(), isComplete: false)
-                CaseListCell(caseNumber: "20280094875", createdDate: Date(), isComplete: true)
-                CaseListCell(caseNumber: "20285011875", createdDate: Date(), isComplete: false)
+                ForEach(mockData.cases) { c in
+                    CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete)
+                }
+                .onDelete(perform: { indexSet in
+                    mockData.remove(at: indexSet)
+                })
             }
             .navigationTitle("My Cases")
             .toolbar {
