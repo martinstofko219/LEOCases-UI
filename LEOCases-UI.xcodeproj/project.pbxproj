@@ -74,13 +74,29 @@
 			isa = PBXGroup;
 			children = (
 				C60A77EA2A421739007FAE47 /* MainTabView.swift */,
-				C60A77EC2A42177C007FAE47 /* MyCasesView.swift */,
-				C6BD08412A43402B006035BF /* AddCaseView.swift */,
-				C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */,
-				C60A77EE2A42178E007FAE47 /* MyCourtDatesView.swift */,
+				C65B740F2A44B17000F5B865 /* My Cases */,
+				C65B74102A44B17E00F5B865 /* My Court Dates */,
 				C60A77F02A421794007FAE47 /* SettingsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C65B740F2A44B17000F5B865 /* My Cases */ = {
+			isa = PBXGroup;
+			children = (
+				C60A77EC2A42177C007FAE47 /* MyCasesView.swift */,
+				C6BD08412A43402B006035BF /* AddCaseView.swift */,
+				C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */,
+			);
+			path = "My Cases";
+			sourceTree = "<group>";
+		};
+		C65B74102A44B17E00F5B865 /* My Court Dates */ = {
+			isa = PBXGroup;
+			children = (
+				C60A77EE2A42178E007FAE47 /* MyCourtDatesView.swift */,
+			);
+			path = "My Court Dates";
 			sourceTree = "<group>";
 		};
 		C6768A912A421B630090666C /* Models */ = {
