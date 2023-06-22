@@ -17,4 +17,5 @@ struct Case: Hashable, Identifiable {
     var courtOrders: [CourtOrder] = []
     var searchWarrants: [SearchWarrant] = []
     var extraTasks: [ExtraTask] = []
+    var victims: [Victim] = []
 }

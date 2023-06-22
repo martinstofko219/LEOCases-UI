@@ -16,6 +16,8 @@
 		C65B74122A44B27E00F5B865 /* Victim.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B74112A44B27E00F5B865 /* Victim.swift */; };
 		C65B74142A44B32200F5B865 /* Subpeona.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B74132A44B32200F5B865 /* Subpeona.swift */; };
 		C65B74162A44B36400F5B865 /* CameraFootage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B74152A44B36400F5B865 /* CameraFootage.swift */; };
+		C65B74182A44B3F200F5B865 /* VictimDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B74172A44B3F200F5B865 /* VictimDetailView.swift */; };
+		C65B741B2A44B59700F5B865 /* VictimCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B741A2A44B59700F5B865 /* VictimCellView.swift */; };
 		C6768A932A421BC90090666C /* CaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6768A922A421BC90090666C /* CaseListCell.swift */; };
 		C687B4A12A43CEAB00F95899 /* CaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */; };
 		C6BD08422A43402B006035BF /* AddCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BD08412A43402B006035BF /* AddCaseView.swift */; };
@@ -40,6 +42,8 @@
 		C65B74112A44B27E00F5B865 /* Victim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Victim.swift; sourceTree = "<group>"; };
 		C65B74132A44B32200F5B865 /* Subpeona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subpeona.swift; sourceTree = "<group>"; };
 		C65B74152A44B36400F5B865 /* CameraFootage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFootage.swift; sourceTree = "<group>"; };
+		C65B74172A44B3F200F5B865 /* VictimDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictimDetailView.swift; sourceTree = "<group>"; };
+		C65B741A2A44B59700F5B865 /* VictimCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictimCellView.swift; sourceTree = "<group>"; };
 		C6768A922A421BC90090666C /* CaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseListCell.swift; sourceTree = "<group>"; };
 		C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailView.swift; sourceTree = "<group>"; };
 		C6BD08412A43402B006035BF /* AddCaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaseView.swift; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				C6768A922A421BC90090666C /* CaseListCell.swift */,
+				C65B741A2A44B59700F5B865 /* VictimCellView.swift */,
 				C6D883922A434F8200300F3B /* ToDoListCell.swift */,
 				C6D6CE142A44734900C62CC5 /* AddToDoListCell.swift */,
 			);
@@ -80,21 +85,22 @@
 			isa = PBXGroup;
 			children = (
 				C60A77EA2A421739007FAE47 /* MainTabView.swift */,
-				C65B740F2A44B17000F5B865 /* My Cases */,
+				C65B740F2A44B17000F5B865 /* Cases */,
+				C65B74192A44B4AF00F5B865 /* Victims */,
 				C65B74102A44B17E00F5B865 /* My Court Dates */,
 				C60A77F02A421794007FAE47 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C65B740F2A44B17000F5B865 /* My Cases */ = {
+		C65B740F2A44B17000F5B865 /* Cases */ = {
 			isa = PBXGroup;
 			children = (
 				C60A77EC2A42177C007FAE47 /* MyCasesView.swift */,
 				C6BD08412A43402B006035BF /* AddCaseView.swift */,
 				C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */,
 			);
-			path = "My Cases";
+			path = Cases;
 			sourceTree = "<group>";
 		};
 		C65B74102A44B17E00F5B865 /* My Court Dates */ = {
@@ -103,6 +109,14 @@
 				C60A77EE2A42178E007FAE47 /* MyCourtDatesView.swift */,
 			);
 			path = "My Court Dates";
+			sourceTree = "<group>";
+		};
+		C65B74192A44B4AF00F5B865 /* Victims */ = {
+			isa = PBXGroup;
+			children = (
+				C65B74172A44B3F200F5B865 /* VictimDetailView.swift */,
+			);
+			path = Victims;
 			sourceTree = "<group>";
 		};
 		C6768A912A421B630090666C /* Models */ = {
@@ -230,6 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60A77ED2A42177C007FAE47 /* MyCasesView.swift in Sources */,
+				C65B74182A44B3F200F5B865 /* VictimDetailView.swift in Sources */,
+				C65B741B2A44B59700F5B865 /* VictimCellView.swift in Sources */,
 				C6E177112A439BBE0003500D /* ExtraTask.swift in Sources */,
 				C65B74162A44B36400F5B865 /* CameraFootage.swift in Sources */,
 				C6768A932A421BC90090666C /* CaseListCell.swift in Sources */,

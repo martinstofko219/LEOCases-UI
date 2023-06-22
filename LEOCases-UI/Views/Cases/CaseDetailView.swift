@@ -43,7 +43,7 @@ struct CaseDetailView: View {
                 }
                 
                 Section("SEARCH WARRANTS") {
-                    List{
+                    List {
                         ForEach($caseDetail.searchWarrants) { $warrant in
                             ToDoListCell(label: $warrant.label, isComplete: $warrant.isComplete, allowEditing: true)
                         }
@@ -62,7 +62,7 @@ struct CaseDetailView: View {
                 }
                 
                 Section("EXTRA TASKS") {
-                    List{
+                    List {
                         ForEach($caseDetail.extraTasks) { $task in
                             ToDoListCell(label: $task.label, isComplete: $task.isComplete, allowEditing: true)
                         }
@@ -77,6 +77,14 @@ struct CaseDetailView: View {
                                     newExtraTaskLabel = ""
                                 }
                             }
+                    }
+                }
+                
+                Section("VICTIMS") {
+                    List($caseDetail.victims, editActions: .delete) { $victim in
+                        NavigationLink(destination: VictimDetailView(victim: $victim)) {
+//                            CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete)
+                        }
                     }
                 }
             }
