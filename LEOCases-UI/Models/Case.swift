@@ -14,6 +14,7 @@ struct Case: Hashable, Identifiable {
     
     var isComplete: Bool = false
     var sharedWithProsecutor: Bool = false
+    var courtOrders: [CourtOrder] = []
     var searchWarrants: [SearchWarrant] = []
     var extraTasks: [ExtraTask] = []
 }

@@ -12,6 +12,7 @@
 		C60A77EF2A42178E007FAE47 /* MyCourtDatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A77EE2A42178E007FAE47 /* MyCourtDatesView.swift */; };
 		C60A77F12A421794007FAE47 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A77F02A421794007FAE47 /* SettingsView.swift */; };
 		C629DFF22A436E5A0056DEF8 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C629DFF12A436E5A0056DEF8 /* MockData.swift */; };
+		C64AA0F32A449B5700FBAD89 /* CourtOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64AA0F22A449B5700FBAD89 /* CourtOrder.swift */; };
 		C6768A932A421BC90090666C /* CaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6768A922A421BC90090666C /* CaseListCell.swift */; };
 		C687B4A12A43CEAB00F95899 /* CaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */; };
 		C6BD08422A43402B006035BF /* AddCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BD08412A43402B006035BF /* AddCaseView.swift */; };
@@ -32,6 +33,7 @@
 		C60A77EE2A42178E007FAE47 /* MyCourtDatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourtDatesView.swift; sourceTree = "<group>"; };
 		C60A77F02A421794007FAE47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C629DFF12A436E5A0056DEF8 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		C64AA0F22A449B5700FBAD89 /* CourtOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtOrder.swift; sourceTree = "<group>"; };
 		C6768A922A421BC90090666C /* CaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseListCell.swift; sourceTree = "<group>"; };
 		C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailView.swift; sourceTree = "<group>"; };
 		C6BD08412A43402B006035BF /* AddCaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaseView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				C6D883942A43522900300F3B /* Case.swift */,
+				C64AA0F22A449B5700FBAD89 /* CourtOrder.swift */,
 				C6E1770E2A439B420003500D /* SearchWarrant.swift */,
 				C6E177102A439BBE0003500D /* ExtraTask.swift */,
 				C629DFF12A436E5A0056DEF8 /* MockData.swift */,
@@ -215,6 +218,7 @@
 				C629DFF22A436E5A0056DEF8 /* MockData.swift in Sources */,
 				C687B4A12A43CEAB00F95899 /* CaseDetailView.swift in Sources */,
 				C60A77EB2A421739007FAE47 /* MainTabView.swift in Sources */,
+				C64AA0F32A449B5700FBAD89 /* CourtOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

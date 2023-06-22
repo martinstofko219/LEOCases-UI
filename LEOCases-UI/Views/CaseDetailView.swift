@@ -10,8 +10,9 @@ import SwiftUI
 struct CaseDetailView: View {
     @Binding var caseDetail: Case
     
-    @State private var searchWarrantLabel: String = ""
-    @State private var extraTaskLabel: String = ""
+    @State private var newCourtOrderLabel: String = ""
+    @State private var newSearchWarrantLabel: String = ""
+    @State private var newExtraTaskLabel: String = ""
     
     var body: some View {
         NavigationStack {
@@ -19,6 +20,23 @@ struct CaseDetailView: View {
                 Section {
                     List {
                         ToDoListCell(label: .constant("Shared with Prosecutor"), isComplete: $caseDetail.sharedWithProsecutor, allowEditing: false)
+                    }
+                }
+                
+                Section("COURT ORDERS") {
+                    List{
+                        ForEach($caseDetail.courtOrders) { $courtOrder in
+                            ToDoListCell(label: $courtOrder.label, isComplete: $courtOrder.isComplete, allowEditing: true)
+                        }
+                        .onDelete(perform: { indexSet in
+                            caseDetail.courtOrders.remove(atOffsets: indexSet)
+                        })
+                        
+                        AddToDoListCell(label: $newCourtOrderLabel, placeholder: "Add Court Order...")
+                            .onSubmit {
+                                caseDetail.courtOrders.append(CourtOrder(id: UUID(), label: newCourtOrderLabel))
+                                newCourtOrderLabel = ""
+                            }
                     }
                 }
                 
@@ -31,10 +49,10 @@ struct CaseDetailView: View {
                             caseDetail.searchWarrants.remove(atOffsets: indexSet)
                         })
                         
-                        AddToDoListCell(label: $searchWarrantLabel, placeholder: "Add Search Warrant...")
+                        AddToDoListCell(label: $newSearchWarrantLabel, placeholder: "Add Search Warrant...")
                             .onSubmit {
-                                caseDetail.searchWarrants.append(SearchWarrant(id: UUID(), label: searchWarrantLabel))
-                                searchWarrantLabel = ""
+                                caseDetail.searchWarrants.append(SearchWarrant(id: UUID(), label: newSearchWarrantLabel))
+                                newSearchWarrantLabel = ""
                             }
                     }
                 }
@@ -48,10 +66,10 @@ struct CaseDetailView: View {
                             caseDetail.extraTasks.remove(atOffsets: indexSet)
                         })
                         
-                        AddToDoListCell(label: $extraTaskLabel, placeholder: "Add Extra Task...")
+                        AddToDoListCell(label: $newExtraTaskLabel, placeholder: "Add Extra Task...")
                             .onSubmit {
-                                caseDetail.extraTasks.append(ExtraTask(id: UUID(), label: extraTaskLabel))
-                                extraTaskLabel = ""
+                                caseDetail.extraTasks.append(ExtraTask(id: UUID(), label: newExtraTaskLabel))
+                                newExtraTaskLabel = ""
                             }
                     }
                 }
