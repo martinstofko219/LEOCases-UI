@@ -34,8 +34,10 @@ struct CaseDetailView: View {
                         
                         AddToDoListCell(label: $newCourtOrderLabel, placeholder: "Add Court Order...")
                             .onSubmit {
-                                caseDetail.courtOrders.append(CourtOrder(id: UUID(), label: newCourtOrderLabel))
-                                newCourtOrderLabel = ""
+                                if !newCourtOrderLabel.isEmpty {
+                                    caseDetail.courtOrders.append(CourtOrder(id: UUID(), label: newCourtOrderLabel))
+                                    newCourtOrderLabel = ""
+                                }
                             }
                     }
                 }
@@ -51,8 +53,10 @@ struct CaseDetailView: View {
                         
                         AddToDoListCell(label: $newSearchWarrantLabel, placeholder: "Add Search Warrant...")
                             .onSubmit {
-                                caseDetail.searchWarrants.append(SearchWarrant(id: UUID(), label: newSearchWarrantLabel))
-                                newSearchWarrantLabel = ""
+                                if !newSearchWarrantLabel.isEmpty {
+                                    caseDetail.searchWarrants.append(SearchWarrant(id: UUID(), label: newSearchWarrantLabel))
+                                    newSearchWarrantLabel = ""
+                                }
                             }
                     }
                 }
@@ -68,8 +72,10 @@ struct CaseDetailView: View {
                         
                         AddToDoListCell(label: $newExtraTaskLabel, placeholder: "Add Extra Task...")
                             .onSubmit {
-                                caseDetail.extraTasks.append(ExtraTask(id: UUID(), label: newExtraTaskLabel))
-                                newExtraTaskLabel = ""
+                                if !newExtraTaskLabel.isEmpty {
+                                    caseDetail.extraTasks.append(ExtraTask(id: UUID(), label: newExtraTaskLabel))
+                                    newExtraTaskLabel = ""
+                                }
                             }
                     }
                 }

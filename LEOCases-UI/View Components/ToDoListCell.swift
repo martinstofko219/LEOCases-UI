@@ -18,7 +18,7 @@ struct ToDoListCell: View {
     var body: some View {
         HStack {
             if (allowEditing && isEditing) {
-                TextField("Enter new label...", text: $label)
+                TextField("Enter Label...", text: $label)
                     .submitLabel(.done)
             } else {
                 Text(label)
