@@ -23,7 +23,6 @@ struct MyCasesView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Add Case") {
-                        print("Add Case tapped")
                         showingAddCaseSheet.toggle()
                     }
                 }

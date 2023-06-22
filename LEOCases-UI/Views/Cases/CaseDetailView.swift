@@ -10,6 +10,7 @@ import SwiftUI
 struct CaseDetailView: View {
     @Binding var caseDetail: Case
     
+    @State private var showingAddVictimSheet = false
     @State private var newCourtOrderLabel: String = ""
     @State private var newSearchWarrantLabel: String = ""
     @State private var newExtraTaskLabel: String = ""
@@ -88,11 +89,14 @@ struct CaseDetailView: View {
                     }
                     
                     Button("Add Victim") {
-                        print("Add Victim tapped")
+                        showingAddVictimSheet.toggle()
                     }
                 }
             }
             .navigationTitle(caseDetail.caseNumber)
+            .sheet(isPresented: $showingAddVictimSheet) {
+                AddVictimView(caseDetail: $caseDetail)
+            }
         }
     }
 }
