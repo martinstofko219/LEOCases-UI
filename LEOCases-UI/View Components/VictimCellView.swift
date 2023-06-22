@@ -23,9 +23,9 @@ struct VictimCellView: View {
                 Text(name)
                     .font(.body).bold()
                 
-                Text("\(pendingCount) items pending")
+                Text(isComplete ? "Complete" : "\(pendingCount) items pending")
                     .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(isComplete ? .green : .secondary)
             }
             .padding(.leading, 10)
             

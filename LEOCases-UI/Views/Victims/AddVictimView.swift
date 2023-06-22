@@ -57,4 +57,5 @@ struct AddVictimView: View {
 
 #Preview {
     AddVictimView(caseDetail: .constant(Case(id: UUID(), caseNumber: "1234", createdOn: Date())))
+        .preferredColorScheme(.dark)
 }
