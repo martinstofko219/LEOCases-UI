@@ -13,6 +13,9 @@
 		C60A77F12A421794007FAE47 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A77F02A421794007FAE47 /* SettingsView.swift */; };
 		C629DFF22A436E5A0056DEF8 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C629DFF12A436E5A0056DEF8 /* MockData.swift */; };
 		C64AA0F32A449B5700FBAD89 /* CourtOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64AA0F22A449B5700FBAD89 /* CourtOrder.swift */; };
+		C65B74122A44B27E00F5B865 /* Victim.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B74112A44B27E00F5B865 /* Victim.swift */; };
+		C65B74142A44B32200F5B865 /* Subpeona.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B74132A44B32200F5B865 /* Subpeona.swift */; };
+		C65B74162A44B36400F5B865 /* CameraFootage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B74152A44B36400F5B865 /* CameraFootage.swift */; };
 		C6768A932A421BC90090666C /* CaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6768A922A421BC90090666C /* CaseListCell.swift */; };
 		C687B4A12A43CEAB00F95899 /* CaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */; };
 		C6BD08422A43402B006035BF /* AddCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BD08412A43402B006035BF /* AddCaseView.swift */; };
@@ -34,6 +37,9 @@
 		C60A77F02A421794007FAE47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C629DFF12A436E5A0056DEF8 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		C64AA0F22A449B5700FBAD89 /* CourtOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtOrder.swift; sourceTree = "<group>"; };
+		C65B74112A44B27E00F5B865 /* Victim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Victim.swift; sourceTree = "<group>"; };
+		C65B74132A44B32200F5B865 /* Subpeona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subpeona.swift; sourceTree = "<group>"; };
+		C65B74152A44B36400F5B865 /* CameraFootage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFootage.swift; sourceTree = "<group>"; };
 		C6768A922A421BC90090666C /* CaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseListCell.swift; sourceTree = "<group>"; };
 		C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailView.swift; sourceTree = "<group>"; };
 		C6BD08412A43402B006035BF /* AddCaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaseView.swift; sourceTree = "<group>"; };
@@ -103,9 +109,12 @@
 			isa = PBXGroup;
 			children = (
 				C6D883942A43522900300F3B /* Case.swift */,
+				C65B74112A44B27E00F5B865 /* Victim.swift */,
 				C64AA0F22A449B5700FBAD89 /* CourtOrder.swift */,
 				C6E1770E2A439B420003500D /* SearchWarrant.swift */,
 				C6E177102A439BBE0003500D /* ExtraTask.swift */,
+				C65B74152A44B36400F5B865 /* CameraFootage.swift */,
+				C65B74132A44B32200F5B865 /* Subpeona.swift */,
 				C629DFF12A436E5A0056DEF8 /* MockData.swift */,
 			);
 			path = Models;
@@ -222,13 +231,16 @@
 			files = (
 				C60A77ED2A42177C007FAE47 /* MyCasesView.swift in Sources */,
 				C6E177112A439BBE0003500D /* ExtraTask.swift in Sources */,
+				C65B74162A44B36400F5B865 /* CameraFootage.swift in Sources */,
 				C6768A932A421BC90090666C /* CaseListCell.swift in Sources */,
+				C65B74122A44B27E00F5B865 /* Victim.swift in Sources */,
 				C6D6CE152A44734900C62CC5 /* AddToDoListCell.swift in Sources */,
 				C6D883932A434F8200300F3B /* ToDoListCell.swift in Sources */,
 				C60A77EF2A42178E007FAE47 /* MyCourtDatesView.swift in Sources */,
 				C6BD08422A43402B006035BF /* AddCaseView.swift in Sources */,
 				C60A77F12A421794007FAE47 /* SettingsView.swift in Sources */,
 				C6D883952A43522900300F3B /* Case.swift in Sources */,
+				C65B74142A44B32200F5B865 /* Subpeona.swift in Sources */,
 				C6C844652A41D37900549E77 /* LEOCases_UIApp.swift in Sources */,
 				C6E1770F2A439B420003500D /* SearchWarrant.swift in Sources */,
 				C629DFF22A436E5A0056DEF8 /* MockData.swift in Sources */,
