@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct VictimCellView: View {
+    var name: String
+    var pendingCount: Int
+    var isComplete: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "storefront.circle.fill")
+                .resizable()
+                .frame(width: 40, height: 40)
+                .foregroundColor(isComplete ? .green : .blue)
+            
+            VStack(alignment: .leading) {
+                Text(name)
+                    .font(.body).bold()
+                
+                Text("\(pendingCount) items pending")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+            .padding(.leading, 10)
+            
+            Spacer()
+        }
     }
 }
 
 #Preview {
-    VictimCellView()
+    VictimCellView(name: "Target", pendingCount: 3, isComplete: false)
+        .preferredColorScheme(.dark)
+        .scaledToFit()
 }

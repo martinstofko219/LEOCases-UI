@@ -83,8 +83,12 @@ struct CaseDetailView: View {
                 Section("VICTIMS") {
                     List($caseDetail.victims, editActions: .delete) { $victim in
                         NavigationLink(destination: VictimDetailView(victim: $victim)) {
-//                            CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete)
+                            VictimCellView(name: victim.name, pendingCount: victim.pendingCount, isComplete: victim.isComplete)
                         }
+                    }
+                    
+                    Button("Add Victim") {
+                        print("Add Victim tapped")
                     }
                 }
             }

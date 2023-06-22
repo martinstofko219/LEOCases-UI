@@ -20,7 +20,7 @@ struct AddToDoListCell: View {
             Spacer()
             
             Image(systemName: "circle.dotted")
-                .foregroundStyle(.secondary)
+                .foregroundStyle(.tertiary)
         }
     }
 }
