@@ -14,10 +14,11 @@ struct MyCasesView: View {
     
     var body: some View {
         NavigationStack {
-            
             List {
                 ForEach(mockData.cases) { c in
-                    CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete)
+                    NavigationLink(destination: CaseDetailView(caseDetail: c)) {
+                        CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete)
+                    }
                 }
                 .onDelete(perform: { indexSet in
                     mockData.removeCase(at: indexSet)

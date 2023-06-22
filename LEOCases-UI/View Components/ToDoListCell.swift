@@ -10,12 +10,23 @@ import SwiftUI
 struct ToDoListCell: View {
     @State var label: String
     @State var isComplete: Bool
-    @State var isEditing: Bool
+    
+    var allowEditing: Bool
+    
+    @State private var isEditing = false
     
     var body: some View {
         HStack {
-            Text(label)
-                .font(.body)
+            if (allowEditing && isEditing) {
+                TextField("Enter new label...", text: $label)
+                    .submitLabel(.done)
+            } else {
+                Text(label)
+                    .font(.body)
+                    .onTapGesture {
+                        isEditing.toggle()
+                    }
+            }
             
             Spacer()
             
@@ -25,12 +36,11 @@ struct ToDoListCell: View {
                     isComplete.toggle()
                 }
         }
-        .padding()
     }
 }
 
 #Preview {
-    ToDoListCell(label: "ToDo Label...", isComplete: false, isEditing: false)
+    ToDoListCell(label: "ToDo Label...", isComplete: false, allowEditing: false)
         .preferredColorScheme(.dark)
         .scaledToFit()
 }

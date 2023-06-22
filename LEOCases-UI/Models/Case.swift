@@ -7,9 +7,13 @@
 
 import Foundation
 
-struct Case: Identifiable {
+struct Case: Hashable, Identifiable {
     let id: UUID
     let caseNumber: String
     let createdOn: Date
-    let isComplete: Bool
+    
+    var isComplete: Bool = false
+    var sharedWithProsecutor: Bool = false
+    var searchWarrants: [SearchWarrant] = []
+    var extraTasks: [ExtraTask] = []
 }

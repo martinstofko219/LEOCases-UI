@@ -13,6 +13,7 @@
 		C60A77F12A421794007FAE47 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A77F02A421794007FAE47 /* SettingsView.swift */; };
 		C629DFF22A436E5A0056DEF8 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C629DFF12A436E5A0056DEF8 /* MockData.swift */; };
 		C6768A932A421BC90090666C /* CaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6768A922A421BC90090666C /* CaseListCell.swift */; };
+		C687B4A12A43CEAB00F95899 /* CaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */; };
 		C6BD08422A43402B006035BF /* AddCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BD08412A43402B006035BF /* AddCaseView.swift */; };
 		C6C844652A41D37900549E77 /* LEOCases_UIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C844642A41D37900549E77 /* LEOCases_UIApp.swift */; };
 		C6C844692A41D37900549E77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C844682A41D37900549E77 /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 		C6C844732A41D3A300549E77 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C6C844722A41D3A300549E77 /* .gitignore */; };
 		C6D883932A434F8200300F3B /* ToDoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D883922A434F8200300F3B /* ToDoListCell.swift */; };
 		C6D883952A43522900300F3B /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D883942A43522900300F3B /* Case.swift */; };
+		C6E1770F2A439B420003500D /* SearchWarrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1770E2A439B420003500D /* SearchWarrant.swift */; };
+		C6E177112A439BBE0003500D /* ExtraTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E177102A439BBE0003500D /* ExtraTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,7 @@
 		C60A77F02A421794007FAE47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C629DFF12A436E5A0056DEF8 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		C6768A922A421BC90090666C /* CaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseListCell.swift; sourceTree = "<group>"; };
+		C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailView.swift; sourceTree = "<group>"; };
 		C6BD08412A43402B006035BF /* AddCaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaseView.swift; sourceTree = "<group>"; };
 		C6C844612A41D37900549E77 /* LEOCases-UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LEOCases-UI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C844642A41D37900549E77 /* LEOCases_UIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEOCases_UIApp.swift; sourceTree = "<group>"; };
@@ -37,6 +41,8 @@
 		C6C844722A41D3A300549E77 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C6D883922A434F8200300F3B /* ToDoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListCell.swift; sourceTree = "<group>"; };
 		C6D883942A43522900300F3B /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
+		C6E1770E2A439B420003500D /* SearchWarrant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWarrant.swift; sourceTree = "<group>"; };
+		C6E177102A439BBE0003500D /* ExtraTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 				C60A77EA2A421739007FAE47 /* MainTabView.swift */,
 				C60A77EC2A42177C007FAE47 /* MyCasesView.swift */,
 				C6BD08412A43402B006035BF /* AddCaseView.swift */,
+				C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */,
 				C60A77EE2A42178E007FAE47 /* MyCourtDatesView.swift */,
 				C60A77F02A421794007FAE47 /* SettingsView.swift */,
 			);
@@ -75,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				C6D883942A43522900300F3B /* Case.swift */,
+				C6E1770E2A439B420003500D /* SearchWarrant.swift */,
+				C6E177102A439BBE0003500D /* ExtraTask.swift */,
 				C629DFF12A436E5A0056DEF8 /* MockData.swift */,
 			);
 			path = Models;
@@ -190,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60A77ED2A42177C007FAE47 /* MyCasesView.swift in Sources */,
+				C6E177112A439BBE0003500D /* ExtraTask.swift in Sources */,
 				C6768A932A421BC90090666C /* CaseListCell.swift in Sources */,
 				C6D883932A434F8200300F3B /* ToDoListCell.swift in Sources */,
 				C60A77EF2A42178E007FAE47 /* MyCourtDatesView.swift in Sources */,
@@ -197,7 +207,9 @@
 				C60A77F12A421794007FAE47 /* SettingsView.swift in Sources */,
 				C6D883952A43522900300F3B /* Case.swift in Sources */,
 				C6C844652A41D37900549E77 /* LEOCases_UIApp.swift in Sources */,
+				C6E1770F2A439B420003500D /* SearchWarrant.swift in Sources */,
 				C629DFF22A436E5A0056DEF8 /* MockData.swift in Sources */,
+				C687B4A12A43CEAB00F95899 /* CaseDetailView.swift in Sources */,
 				C60A77EB2A421739007FAE47 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
