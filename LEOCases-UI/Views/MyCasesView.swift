@@ -15,8 +15,8 @@ struct MyCasesView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(mockData.cases) { c in
-                    NavigationLink(destination: CaseDetailView(caseDetail: c)) {
+                ForEach($mockData.cases) { $c in
+                    NavigationLink(destination: CaseDetailView(caseDetail: $c)) {
                         CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete)
                     }
                 }

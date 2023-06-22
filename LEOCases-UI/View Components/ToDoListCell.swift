@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ToDoListCell: View {
-    @State var label: String
-    @State var isComplete: Bool
+    @Binding var label: String
+    @Binding var isComplete: Bool
     
     var allowEditing: Bool
     
@@ -40,7 +40,7 @@ struct ToDoListCell: View {
 }
 
 #Preview {
-    ToDoListCell(label: "ToDo Label...", isComplete: false, allowEditing: false)
+    ToDoListCell(label: .constant("ToDo Label..."), isComplete: .constant(false), allowEditing: false)
         .preferredColorScheme(.dark)
         .scaledToFit()
 }

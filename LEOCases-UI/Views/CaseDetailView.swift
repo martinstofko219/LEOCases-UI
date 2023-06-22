@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct CaseDetailView: View {
-    var caseDetail: Case
+    @Binding var caseDetail: Case
     
     var body: some View {
         NavigationStack {
             Form {
                 Section {
                     List {
-                        ToDoListCell(label: "Shared with Prosecutor", isComplete: caseDetail.sharedWithProsecutor, allowEditing: false)
+                        ToDoListCell(label: .constant("Shared with Prosecutor"), isComplete: $caseDetail.sharedWithProsecutor, allowEditing: false)
                     }
                 }
             }
@@ -25,6 +25,6 @@ struct CaseDetailView: View {
 }
 
 #Preview {
-    CaseDetailView(caseDetail: Case(id: UUID(), caseNumber: "2029384783493", createdOn: Date()))
+    CaseDetailView(caseDetail: .constant(Case(id: UUID(), caseNumber: "2029384783493", createdOn: Date())))
         .preferredColorScheme(.dark)
 }
