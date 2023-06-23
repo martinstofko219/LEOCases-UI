@@ -16,6 +16,10 @@ struct MyCourtDatesView: View {
                 List($mockData.cases) { $c in
                     CourtDateListCell(caseNumber: c.caseNumber, isComplete: c.isComplete, courtDate: c.courtDate)
                 }
+                
+                if mockData.cases.isEmpty {
+                    EmptyStateView(imageSymbol: "building.columns", label: "Add a Case to be able to create a court date")
+                }
             }.navigationTitle("My Court Dates")
         }
     }

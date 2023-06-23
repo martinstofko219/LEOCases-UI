@@ -14,9 +14,15 @@ struct MyCasesView: View {
     
     var body: some View {
         NavigationStack {
-            List($mockData.cases, editActions: .delete) { $c in
-                NavigationLink(destination: CaseDetailView(caseDetail: $c)) {
-                    CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete)
+            ZStack {
+                List($mockData.cases, editActions: .delete) { $c in
+                    NavigationLink(destination: CaseDetailView(caseDetail: $c)) {
+                        CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete)
+                    }
+                }
+                
+                if mockData.cases.isEmpty {
+                    EmptyStateView(imageSymbol: "tray", label: "No cases?\nEnjoy your free time!")
                 }
             }
             .navigationTitle("My Cases")
@@ -30,29 +36,6 @@ struct MyCasesView: View {
             .sheet(isPresented: $showingAddCaseSheet) {
                 AddCaseView()
             }
-            
-            //            List {
-            //                ForEach($mockData.cases) { $c in
-            //                    NavigationLink(destination: CaseDetailView(caseDetail: $c)) {
-            //                        CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete)
-            //                    }
-            //                }
-            //                .onDelete(perform: { indexSet in
-            //                    mockData.removeCase(at: indexSet)
-            //                })
-            //            }
-            //            .navigationTitle("My Cases")
-            //            .toolbar {
-            //                ToolbarItem(placement: .topBarTrailing) {
-            //                    Button("Add Case") {
-            //                        print("Add Case tapped")
-            //                        showingAddCaseSheet.toggle()
-            //                    }
-            //                }
-            //            }
-            //            .sheet(isPresented: $showingAddCaseSheet) {
-            //                AddCaseView()
-            //            }
         }
     }
 }

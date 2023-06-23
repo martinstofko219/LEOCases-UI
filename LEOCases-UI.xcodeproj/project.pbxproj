@@ -19,6 +19,7 @@
 		C65B74182A44B3F200F5B865 /* VictimDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B74172A44B3F200F5B865 /* VictimDetailView.swift */; };
 		C65B741B2A44B59700F5B865 /* VictimCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B741A2A44B59700F5B865 /* VictimCellView.swift */; };
 		C6768A932A421BC90090666C /* CaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6768A922A421BC90090666C /* CaseListCell.swift */; };
+		C67F21442A45B4FC007C0EFD /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67F21432A45B4FC007C0EFD /* EmptyStateView.swift */; };
 		C687B4A12A43CEAB00F95899 /* CaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */; };
 		C68EC9C42A45111F004EEFEA /* CourtDateListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68EC9C32A45111F004EEFEA /* CourtDateListCell.swift */; };
 		C6A6C9CA2A44C82A00D5BEE2 /* AddVictimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A6C9C92A44C82A00D5BEE2 /* AddVictimView.swift */; };
@@ -47,6 +48,7 @@
 		C65B74172A44B3F200F5B865 /* VictimDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictimDetailView.swift; sourceTree = "<group>"; };
 		C65B741A2A44B59700F5B865 /* VictimCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictimCellView.swift; sourceTree = "<group>"; };
 		C6768A922A421BC90090666C /* CaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseListCell.swift; sourceTree = "<group>"; };
+		C67F21432A45B4FC007C0EFD /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		C687B4A02A43CEAB00F95899 /* CaseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailView.swift; sourceTree = "<group>"; };
 		C68EC9C32A45111F004EEFEA /* CourtDateListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtDateListCell.swift; sourceTree = "<group>"; };
 		C6A6C9C92A44C82A00D5BEE2 /* AddVictimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVictimView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				C6D883922A434F8200300F3B /* ToDoListCell.swift */,
 				C6D6CE142A44734900C62CC5 /* AddToDoListCell.swift */,
 				C68EC9C32A45111F004EEFEA /* CourtDateListCell.swift */,
+				C67F21432A45B4FC007C0EFD /* EmptyStateView.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				C60A77ED2A42177C007FAE47 /* MyCasesView.swift in Sources */,
 				C6A6C9CA2A44C82A00D5BEE2 /* AddVictimView.swift in Sources */,
+				C67F21442A45B4FC007C0EFD /* EmptyStateView.swift in Sources */,
 				C65B74182A44B3F200F5B865 /* VictimDetailView.swift in Sources */,
 				C65B741B2A44B59700F5B865 /* VictimCellView.swift in Sources */,
 				C6E177112A439BBE0003500D /* ExtraTask.swift in Sources */,
