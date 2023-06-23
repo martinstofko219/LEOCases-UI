@@ -12,6 +12,7 @@ struct MyCourtDatesView: View {
     
     @State private var showDatePicker = false
     @State private var newCourtDate = Date()
+    @State private var datePickerCaseNumber = ""
     
     var body: some View {
         NavigationStack {
@@ -20,10 +21,11 @@ struct MyCourtDatesView: View {
                     CourtDateListCell(caseNumber: c.caseNumber, isComplete: c.isComplete, courtDate: c.courtDate)
                         .onTapGesture {
                             newCourtDate = c.courtDate ?? Date()
+                            datePickerCaseNumber = c.caseNumber
                             showDatePicker.toggle()
                         }
                     
-                    if showDatePicker {
+                    if showDatePicker && c.caseNumber == datePickerCaseNumber {
                         VStack {
                             DatePicker("", selection: $newCourtDate)
                                 .datePickerStyle(.graphical)
@@ -44,7 +46,6 @@ struct MyCourtDatesView: View {
                                 .buttonStyle(.borderedProminent)
                             }
                         }
-                        
                     }
                 }
                 
