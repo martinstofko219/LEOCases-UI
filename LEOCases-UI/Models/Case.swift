@@ -33,6 +33,19 @@ struct Case: Hashable, Identifiable {
         return count
     }
     
+    var completedCount: Int {
+        return totalCount - pendingCount
+    }
+    
+    var totalCount: Int {
+        var count = 1
+        count += courtOrders.count
+        count += searchWarrants.count
+        count += extraTasks.count
+        count += victims.count
+        return count
+    }
+    
     var isComplete: Bool {
         return pendingCount == 0
     }

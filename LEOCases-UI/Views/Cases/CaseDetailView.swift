@@ -18,6 +18,10 @@ struct CaseDetailView: View {
     var body: some View {
         NavigationStack {
             Form {
+                CompletionIndicatorView(completedItems: caseDetail.completedCount, totalItems: caseDetail.totalCount)
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(EdgeInsets())
+                
                 Section {
                     List {
                         ToDoListCell(label: .constant("Shared with Prosecutor"), isComplete: $caseDetail.sharedWithProsecutor, allowEditing: false)

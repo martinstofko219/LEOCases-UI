@@ -14,7 +14,7 @@ struct CompletionIndicatorView: View {
     var body: some View {
         ProgressView(value: Float(completedItems), total: Float(totalItems), label: {
             HStack {
-                Text("Completed Items")
+                Text("Completed")
                     .font(.callout)
                     .foregroundStyle(.secondary)
                 

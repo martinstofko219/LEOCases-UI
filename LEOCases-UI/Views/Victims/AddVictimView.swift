@@ -19,18 +19,27 @@ struct AddVictimView: View {
     @State private var victimName: String = ""
     @FocusState private var focusedField: FocusedField?
     
+    private func addVictim(name: String) {
+        let v = Victim(id: UUID(), name: victimName)
+        caseDetail.victims.append(v)
+        dismiss()
+    }
+    
     var body: some View {
         NavigationStack {
             Form {
                 Section {
                     TextField("Victim name...", text: $victimName)
                         .focused($focusedField, equals: .victimName)
+                        .onSubmit {
+                            addVictim(name: victimName)
+                        }
                 }
                 
                 Button {
-                    let v = Victim(id: UUID(), name: victimName)
-                    caseDetail.victims.append(v)
-                    dismiss()
+                    //                    let v = Victim(id: UUID(), name: victimName)
+                    //                    caseDetail.victims.append(v)
+                    addVictim(name: victimName)
                 } label: {
                     Text("Add Victim")
                         .frame(maxWidth: .infinity)
