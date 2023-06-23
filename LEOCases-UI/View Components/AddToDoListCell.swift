@@ -20,6 +20,8 @@ struct AddToDoListCell: View {
             Spacer()
             
             Image(systemName: "circle.dotted")
+                .resizable()
+                .frame(width: 20, height: 20)
                 .foregroundStyle(.tertiary)
         }
     }
