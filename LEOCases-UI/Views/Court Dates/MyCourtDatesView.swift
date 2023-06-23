@@ -10,11 +10,42 @@ import SwiftUI
 struct MyCourtDatesView: View {
     @EnvironmentObject var mockData: MockData
     
+    @State private var showDatePicker = false
+    @State private var newCourtDate = Date()
+    
     var body: some View {
         NavigationStack {
             ZStack{
                 List($mockData.cases) { $c in
                     CourtDateListCell(caseNumber: c.caseNumber, isComplete: c.isComplete, courtDate: c.courtDate)
+                        .onTapGesture {
+                            newCourtDate = c.courtDate ?? Date()
+                            showDatePicker.toggle()
+                        }
+                    
+                    if showDatePicker {
+                        VStack {
+                            DatePicker("", selection: $newCourtDate)
+                                .datePickerStyle(.graphical)
+                            
+                            HStack {
+                                Button("Clear Date") {
+                                    c.courtDate = nil
+                                    showDatePicker.toggle()
+                                }
+                                .foregroundStyle(.red)
+                                
+                                Spacer()
+                                
+                                Button("Set Court Date") {
+                                    c.courtDate = newCourtDate
+                                    showDatePicker.toggle()
+                                }
+                                .buttonStyle(.borderedProminent)
+                            }
+                        }
+                        
+                    }
                 }
                 
                 if mockData.cases.isEmpty {

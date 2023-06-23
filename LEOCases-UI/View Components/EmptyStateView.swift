@@ -20,7 +20,7 @@ struct EmptyStateView: View {
                 .foregroundStyle(.tertiary)
             
             Text(label)
-                .font(.title)
+                .font(.title2)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.tertiary)
                 .padding()
