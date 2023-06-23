@@ -12,6 +12,7 @@ struct Case: Hashable, Identifiable {
     let caseNumber: String
     let createdOn: Date
     
+    var courtDate: Date?
     var sharedWithProsecutor: Bool = false
     var courtOrders: [CourtOrder] = []
     var searchWarrants: [SearchWarrant] = []
