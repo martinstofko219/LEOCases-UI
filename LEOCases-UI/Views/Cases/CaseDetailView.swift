@@ -94,6 +94,7 @@ struct CaseDetailView: View {
                 }
             }
             .navigationTitle(caseDetail.caseNumber)
+            .listSectionSpacing(.compact)
             .sheet(isPresented: $showingAddVictimSheet) {
                 AddVictimView(caseDetail: $caseDetail)
             }

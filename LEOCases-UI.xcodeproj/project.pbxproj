@@ -13,6 +13,7 @@
 		C60A77F12A421794007FAE47 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A77F02A421794007FAE47 /* SettingsView.swift */; };
 		C629DFF22A436E5A0056DEF8 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C629DFF12A436E5A0056DEF8 /* MockData.swift */; };
 		C64AA0F32A449B5700FBAD89 /* CourtOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64AA0F22A449B5700FBAD89 /* CourtOrder.swift */; };
+		C64C001F2A4620F9006712D1 /* CompletionIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C001E2A4620F9006712D1 /* CompletionIndicatorView.swift */; };
 		C65B74122A44B27E00F5B865 /* Victim.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B74112A44B27E00F5B865 /* Victim.swift */; };
 		C65B74142A44B32200F5B865 /* Subpeona.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B74132A44B32200F5B865 /* Subpeona.swift */; };
 		C65B74162A44B36400F5B865 /* CameraFootage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65B74152A44B36400F5B865 /* CameraFootage.swift */; };
@@ -42,6 +43,7 @@
 		C60A77F02A421794007FAE47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C629DFF12A436E5A0056DEF8 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		C64AA0F22A449B5700FBAD89 /* CourtOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtOrder.swift; sourceTree = "<group>"; };
+		C64C001E2A4620F9006712D1 /* CompletionIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionIndicatorView.swift; sourceTree = "<group>"; };
 		C65B74112A44B27E00F5B865 /* Victim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Victim.swift; sourceTree = "<group>"; };
 		C65B74132A44B32200F5B865 /* Subpeona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subpeona.swift; sourceTree = "<group>"; };
 		C65B74152A44B36400F5B865 /* CameraFootage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFootage.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				C6D6CE142A44734900C62CC5 /* AddToDoListCell.swift */,
 				C68EC9C32A45111F004EEFEA /* CourtDateListCell.swift */,
 				C67F21432A45B4FC007C0EFD /* EmptyStateView.swift */,
+				C64C001E2A4620F9006712D1 /* CompletionIndicatorView.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			files = (
 				C60A77ED2A42177C007FAE47 /* MyCasesView.swift in Sources */,
 				C6A6C9CA2A44C82A00D5BEE2 /* AddVictimView.swift in Sources */,
+				C64C001F2A4620F9006712D1 /* CompletionIndicatorView.swift in Sources */,
 				C67F21442A45B4FC007C0EFD /* EmptyStateView.swift in Sources */,
 				C65B74182A44B3F200F5B865 /* VictimDetailView.swift in Sources */,
 				C65B741B2A44B59700F5B865 /* VictimCellView.swift in Sources */,

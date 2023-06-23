@@ -44,5 +44,5 @@ struct ToDoListCell: View {
 #Preview {
     ToDoListCell(label: .constant("ToDo Label..."), isComplete: .constant(false), allowEditing: false)
         .preferredColorScheme(.dark)
-        .scaledToFit()
+        .previewLayout(.sizeThatFits)
 }

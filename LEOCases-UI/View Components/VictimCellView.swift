@@ -37,5 +37,5 @@ struct VictimCellView: View {
 #Preview {
     VictimCellView(name: "Target", pendingCount: 3, isComplete: false)
         .preferredColorScheme(.dark)
-        .scaledToFit()
+        .previewLayout(.sizeThatFits)
 }

@@ -18,6 +18,10 @@ struct VictimDetailView: View {
     var body: some View {
         NavigationStack {
             Form {
+                CompletionIndicatorView(completedItems: victim.completedCount, totalItems: victim.totalCount)
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(EdgeInsets())
+                
                 Section {
                     List {
                         TextField("Victim Name...", text: $victim.name)
@@ -102,6 +106,7 @@ struct VictimDetailView: View {
                 }
             }
             .navigationTitle(victim.name)
+            .listSectionSpacing(.compact)
         }
     }
 }

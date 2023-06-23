@@ -30,5 +30,5 @@ struct AddToDoListCell: View {
 #Preview {
     AddToDoListCell(label: .constant(""), placeholder: "Add Item...")
         .preferredColorScheme(.dark)
-        .scaledToFit()
+        .previewLayout(.sizeThatFits)
 }

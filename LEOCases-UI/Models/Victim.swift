@@ -31,6 +31,19 @@ struct Victim: Hashable, Identifiable {
         return count
     }
     
+    var completedCount: Int {
+        return totalCount - pendingCount
+    }
+    
+    var totalCount: Int {
+        var count = 1
+        count += subpeonas.count
+        count += courtOrders.count
+        count += cameraFootage.count
+        count += extraTasks.count
+        return count
+    }
+    
     var isComplete: Bool {
         return pendingCount == 0
     }

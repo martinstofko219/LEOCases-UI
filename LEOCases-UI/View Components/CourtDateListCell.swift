@@ -61,5 +61,5 @@ struct CourtDateListCell: View {
 #Preview {
     CourtDateListCell(caseNumber: "29293484932", isComplete: false)
         .preferredColorScheme(.dark)
-        .scaledToFit()
+        .previewLayout(.sizeThatFits)
 }
