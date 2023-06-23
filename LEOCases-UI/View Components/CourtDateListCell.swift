@@ -23,7 +23,7 @@ struct CourtDateListCell: View {
     }
     
     private func formatDate(value: Date?) -> String {
-        var dateString = "No Court Date Set"
+        var dateString = "Tap to Set Court Date"
         
         guard let courtDate = value else { return dateString }
         
