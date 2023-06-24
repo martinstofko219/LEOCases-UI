@@ -33,7 +33,7 @@ struct ToDoListCell: View {
             Image(systemName: isComplete ? "checkmark.circle.fill" : "circle")
                 .resizable()
                 .frame(width: 20, height: 20)
-                .foregroundStyle(.blue)
+                .foregroundStyle(Color("PoliceBlue"))
                 .onTapGesture {
                     isComplete.toggle()
                 }

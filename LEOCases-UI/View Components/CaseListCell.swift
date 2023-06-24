@@ -24,7 +24,7 @@ struct CaseListCell: View {
             Image(systemName: "folder.circle.fill")
                 .resizable()
                 .frame(width: 40, height: 40)
-                .foregroundColor(isComplete ? .green : .blue)
+                .foregroundColor(isComplete ? Color("PoliceGreen") : Color("PoliceBlue"))
         
             VStack(alignment: .leading) {
                 Text(caseNumber)

@@ -26,7 +26,7 @@ struct CompletionIndicatorView: View {
                     .multilineTextAlignment(.trailing)
             }
         })
-        .tint(.green)
+        .tint(Color("PoliceGreen"))
     }
 }
 

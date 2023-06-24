@@ -17,7 +17,7 @@ struct VictimListCell: View {
             Image(systemName: "storefront.circle.fill")
                 .resizable()
                 .frame(width: 40, height: 40)
-                .foregroundColor(isComplete ? .green : .blue)
+                .foregroundColor(isComplete ? Color("PoliceGreen") : Color("PoliceBlue"))
             
             VStack(alignment: .leading) {
                 Text(name)
@@ -25,7 +25,7 @@ struct VictimListCell: View {
                 
                 Text(isComplete ? "Complete" : "\(pendingCount) \(pendingCount > 1 ? "items" : "item") pending")
                     .font(.subheadline)
-                    .foregroundStyle(isComplete ? .green : .secondary)
+                    .foregroundStyle(isComplete ? Color("PoliceGreen") : .secondary)
             }
             .padding(.leading, 10)
             

@@ -16,7 +16,7 @@ struct CourtDateListCell: View {
         var color = Color.secondary
         
         if courtDate != nil {
-            color = isComplete ? .green : .blue
+            color = isComplete ? Color("PoliceGreen") : Color("PoliceBlue")
         }
         
         return  color
