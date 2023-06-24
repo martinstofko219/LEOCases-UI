@@ -11,6 +11,7 @@ struct CaseListCell: View {
     var caseNumber: String
     var createdDate: Date
     var isComplete: Bool
+    var pendingCount: Int
     
     private let dateFormatter: DateFormatter = {
         let df = DateFormatter()
@@ -32,6 +33,10 @@ struct CaseListCell: View {
                 Text("Created on \(dateFormatter.string(from: createdDate))")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
+                
+                Text(isComplete ? "Complete" : "\(pendingCount) \(pendingCount > 1 ? "items" : "item") pending")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
             }
             .padding(.leading, 10)
             
@@ -42,7 +47,7 @@ struct CaseListCell: View {
 }
 
 #Preview {
-    CaseListCell(caseNumber: "20294750087", createdDate: Date(), isComplete: false)
+    CaseListCell(caseNumber: "20294750087", createdDate: Date(), isComplete: false, pendingCount: 3)
         .preferredColorScheme(.dark)
         .previewLayout(.sizeThatFits)
 }

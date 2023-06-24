@@ -17,7 +17,7 @@ struct MyCasesView: View {
             ZStack {
                 List($mockData.cases, editActions: .delete) { $c in
                     NavigationLink(destination: CaseDetailView(caseDetail: $c)) {
-                        CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete)
+                        CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete, pendingCount: c.pendingCount)
                     }
                 }
                 

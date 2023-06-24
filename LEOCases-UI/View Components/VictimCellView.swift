@@ -23,7 +23,7 @@ struct VictimCellView: View {
                 Text(name)
                     .font(.body).bold()
                 
-                Text(isComplete ? "Complete" : "\(pendingCount) items pending")
+                Text(isComplete ? "Complete" : "\(pendingCount) \(pendingCount > 1 ? "items" : "item") pending")
                     .font(.subheadline)
                     .foregroundStyle(isComplete ? .green : .secondary)
             }
