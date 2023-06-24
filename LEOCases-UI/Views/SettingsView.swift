@@ -14,13 +14,13 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section("NOTIFICATIONS") {
-                    DatePicker("Notify Me", selection: $notificationDate)
+                    DatePicker("Notify Me At", selection: $notificationDate, displayedComponents: .hourAndMinute)
                     
-                    Button("Set Notifications") {
+                    Button("Set Notification") {
                         print("Set Notification tapped")
                     }
                     
-                    Button("Clear Notifications") {
+                    Button("Clear Notification") {
                         print("Clear Notifications tapped")
                     }
                     .foregroundStyle(.red)
