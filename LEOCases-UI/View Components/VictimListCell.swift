@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VictimCellView: View {
+struct VictimListCell: View {
     var name: String
     var pendingCount: Int
     var isComplete: Bool
@@ -35,7 +35,7 @@ struct VictimCellView: View {
 }
 
 #Preview {
-    VictimCellView(name: "Target", pendingCount: 3, isComplete: false)
+    VictimListCell(name: "Target", pendingCount: 3, isComplete: false)
         .preferredColorScheme(.dark)
         .previewLayout(.sizeThatFits)
 }

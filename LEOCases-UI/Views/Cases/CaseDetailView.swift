@@ -88,7 +88,7 @@ struct CaseDetailView: View {
                 Section("VICTIMS") {
                     List($caseDetail.victims, editActions: .delete) { $victim in
                         NavigationLink(destination: VictimDetailView(victim: $victim)) {
-                            VictimCellView(name: victim.name, pendingCount: victim.pendingCount, isComplete: victim.isComplete)
+                            VictimListCell(name: victim.name, pendingCount: victim.pendingCount, isComplete: victim.isComplete)
                         }
                     }
                     
