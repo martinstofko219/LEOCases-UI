@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State private var notificationDate = Date()
+    
     var body: some View {
-        Text("Settings View")
+        NavigationStack {
+            Form {
+                Section("NOTIFICATIONS") {
+                    DatePicker("Notify Me", selection: $notificationDate)
+                    
+                    Button("Set Notifications") {
+                        print("Set Notification tapped")
+                    }
+                    
+                    Button("Clear Notifications") {
+                        print("Clear Notifications tapped")
+                    }
+                    .foregroundStyle(.red)
+                }
+            }
+            .navigationTitle("Settings")
+        }
     }
 }
 
