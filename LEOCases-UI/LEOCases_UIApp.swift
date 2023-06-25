@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct LEOCases_UIApp: App {
     
-    var mockData = MockData()
+    @StateObject var mockData = MockData()
     
     var body: some Scene {
         WindowGroup {
