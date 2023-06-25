@@ -167,12 +167,12 @@
 		C6C844632A41D37900549E77 /* LEOCases-UI */ = {
 			isa = PBXGroup;
 			children = (
-				C67A90CB2A479E0900736EBC /* Info.plist */,
 				C6768A912A421B630090666C /* Models */,
 				C60A77E92A42171F007FAE47 /* Views */,
 				C60A77E82A421710007FAE47 /* View Components */,
 				C6C844642A41D37900549E77 /* LEOCases_UIApp.swift */,
 				C6C844682A41D37900549E77 /* Assets.xcassets */,
+				C67A90CB2A479E0900736EBC /* Info.plist */,
 				C6C8446A2A41D37900549E77 /* Preview Content */,
 			);
 			path = "LEOCases-UI";
