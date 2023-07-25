@@ -15,9 +15,20 @@ struct MyCasesView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                List($mockData.cases, editActions: .delete) { $c in
-                    NavigationLink(destination: CaseDetailView(caseDetail: $c)) {
-                        CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete, pendingCount: c.pendingCount)
+//                List($mockData.cases, editActions: .delete) { $c in
+//                    NavigationLink(destination: CaseDetailView(caseDetail: $c)) {
+//                        CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete, pendingCount: c.pendingCount)
+//                    }
+//                }
+                
+                List {
+                    ForEach($mockData.cases) { $c in
+                        NavigationLink(destination: CaseDetailView(caseDetail: $c)) {
+                            CaseListCell(caseNumber: c.caseNumber, createdDate: c.createdOn, isComplete: c.isComplete, pendingCount: c.pendingCount)
+                        }
+                    }
+                    .onDelete { indexSet in
+                        mockData.removeCase(at: indexSet)
                     }
                 }
                 
