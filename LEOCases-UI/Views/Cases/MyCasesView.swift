@@ -11,6 +11,8 @@ struct MyCasesView: View {
     @EnvironmentObject var mockData: MockData
     
     @State private var showingAddCaseSheet = false
+    @State private var showingDeleteAlert = false
+    @State private var deleteOffset: IndexSet?
     
     var body: some View {
         NavigationStack {
@@ -28,7 +30,8 @@ struct MyCasesView: View {
                         }
                     }
                     .onDelete { indexSet in
-                        mockData.removeCase(at: indexSet)
+                        deleteOffset = indexSet
+                        showingDeleteAlert = true
                     }
                 }
                 
@@ -47,6 +50,20 @@ struct MyCasesView: View {
             .sheet(isPresented: $showingAddCaseSheet) {
                 AddCaseView()
             }
+            .confirmationDialog("Are you sure you want to delete this case?", isPresented: $showingDeleteAlert, titleVisibility: .visible, actions: {
+                Button("Delete Case", role: .destructive) {
+                    guard let offset = deleteOffset else {
+                        return
+                    }
+                    
+                    if !offset.isEmpty {
+                        withAnimation {
+                            mockData.removeCase(at: offset)
+                        }
+                        deleteOffset = nil
+                    }
+                }
+            })
         }
     }
 }
